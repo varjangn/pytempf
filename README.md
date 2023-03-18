@@ -5,9 +5,9 @@ Simple VSCode Extension to Create and Manage temporary python scripts for quick 
 ## Features
 
 
-- Create files quickly (hint: Cmd+Shift+P and select Python: Create temp file)
-- Temp files are cleaned auto when VSCode restarts
-- Open Files created during VS Code Session
+- Create files quickly (hint: Cmd+Shift+P and select Python: Create temp file).
+- Temp files are cleaned auto when VSCode restarts.
+- Open files created during VS Code Session.
 
 
 ### Building extension
@@ -15,6 +15,8 @@ Simple VSCode Extension to Create and Manage temporary python scripts for quick 
 - Install dependencies
 ```
 $ cd pytempf
+```
+```
 $ npm run i
 ```
 
