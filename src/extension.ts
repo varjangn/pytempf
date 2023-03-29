@@ -4,7 +4,7 @@ import * as os from 'os';
 import * as path from 'path';
 
 const TEMP_DIR_ROOT = os.tmpdir();
-const TEMP_DIR = path.join(TEMP_DIR_ROOT, "pytempf");
+const TEMP_DIR = path.join(TEMP_DIR_ROOT, "tempsf");
 
 
 function cleanTempDir() {
@@ -24,13 +24,13 @@ function cleanTempDir() {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('"pytempf" is now active!');
+	console.log('"tempsf" is now active!');
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand('pytempf.createFile', () => {
+		vscode.commands.registerCommand('tempsf.createPyFile', () => {
 
 		const timestamp = Date.now();
-		const fileName = `temp_${timestamp}.py`;
+		const fileName = `tempf-${timestamp}.py`;
 		const fullFilePath = path.join(TEMP_DIR, fileName);
 
 		try {
@@ -38,10 +38,10 @@ export function activate(context: vscode.ExtensionContext) {
 
 			fs.mkdirSync(TEMP_DIR, { recursive: true });
 			fs.writeFileSync(fullFilePath, data);
-			console.log(`pytempf.createFile: File Created:  ${fullFilePath}`);
+			console.log(`tempsf.createFile: File Created:  ${fullFilePath}`);
 
 		} catch (err) {
-			console.log(`pytempf.createFile: ${err}`);
+			console.log(`tempsf.createFile: ${err}`);
 			return;
 		}
 
@@ -50,12 +50,12 @@ export function activate(context: vscode.ExtensionContext) {
 	}));
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand('pytempf.cleanFiles', () => {
+		vscode.commands.registerCommand('tempsf.cleanFiles', () => {
 		cleanTempDir();
 	}));
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand('pytempf.showFiles', () => {
+		vscode.commands.registerCommand('tempsf.showFiles', () => {
 		const allFiles:string[] = [];
 
 		fs.readdir(TEMP_DIR, (err, files) => {
@@ -81,7 +81,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export function deactivate() {
-	console.log('"pytempf" is now deactived');
+	console.log('"tempsf" is now deactived');
 	console.log("Cleaning temp files...");
 	cleanTempDir();
 }

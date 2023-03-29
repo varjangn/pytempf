@@ -1,6 +1,6 @@
 {
-  "name": "pytempf",
-  "displayName": "pytempf",
+  "name": "tempsf",
+  "displayName": "tempsf",
   "description": "Extension to create temporary python file to run and debug without hassle of saving to dir",
   "version": "0.0.1",
   "engines": {
@@ -11,22 +11,22 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/varjangn/pytempf"
+    "url": "https://github.com/varjangn/tempsf"
   },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "pytempf.createFile",
+        "command": "tempsf.createPyFile",
         "title": "Python: Create temp file"
       },
       {
-        "command": "pytempf.cleanFiles",
+        "command": "tempsf.cleanFiles",
         "title": "Python: Clean temp files"
       },
       {
-        "command": "pytempf.showFiles",
+        "command": "tempsf.showFiles",
         "title": "Python: Show temp files"
       }
     ]

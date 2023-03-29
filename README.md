@@ -1,4 +1,4 @@
-# pytempf README
+# tempsf README
 
 Simple VSCode Extension to Create and Manage temporary python scripts for quick experiments
 
@@ -14,7 +14,7 @@ Simple VSCode Extension to Create and Manage temporary python scripts for quick 
 
 - Install dependencies
 ```
-$ cd pytempf
+$ cd tempsf
 ```
 ```
 $ npm run i
@@ -32,7 +32,7 @@ $ vsce package
 
 - Install extension into your original VS Code Environment
 ```
-$ code --install-extension pytempf-0.0.1.vsix
+$ code --install-extension tempsf-0.0.1.vsix
 ```
 
 
