@@ -1,6 +1,6 @@
 # tempsf README
 
-Simple VSCode Extension to Create and Manage temporary python scripts for quick experiments
+Simple VSCode Extension to Create and Manage temporary source code files (aka scripts) for quick experiments.
 
 ## Features
 
