@@ -14,10 +14,7 @@ Simple VSCode Extension to Create and Manage temporary source code files (aka sc
 
 - Install dependencies
 ```
-cd tempsf
-```
-```
-npm run i
+cd tempsf && npm i
 ```
 
 - Install `vsce` to build extension
